@@ -4,15 +4,18 @@
 	"description": "The cli to rapidly develop apps and websites in seconds",
 	"type": "module",
 	"scripts": {
+		"dev:watch": "tsx watch src/index.ts",
 		"dev": "tsx src/index.ts",
 		"build:dist": "tsc",
 		"build": "pnpm run lint && pnpm run build:dist",
 		"lint": "prettier --check . && eslint .",
 		"lint:fix": "eslint . --fix",
 		"format": "prettier --write .",
+		"test:watch": "vitest --watch",
 		"test:unit": "vitest",
 		"test": "pnpm run test:unit -- --run"
 	},
+	"prepublishOnly": "pnpm run build",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/develop-kit/cli.git"
@@ -38,9 +41,11 @@
 		"@types/node": "^22.10.1",
 		"@typescript-eslint/eslint-plugin": "^8.17.0",
 		"@typescript-eslint/parser": "^8.17.0",
+		"cross-env": "^7.0.3",
 		"eslint": "^9.16.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-prettier": "^5.2.1",
+		"execa": "^9.5.1",
 		"globals": "^15.13.0",
 		"prettier": "^3.4.2",
 		"ts-node": "^10.9.2",
