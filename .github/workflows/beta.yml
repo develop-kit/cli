@@ -1,13 +1,13 @@
-name: Release
+name: Beta
 
 on:
     push:
         branches:
-            - main
+            - beta
 
 jobs:
-    release:
-        name: Release
+    beta:
+        name: Beta
         runs-on: ubuntu-latest
         permissions:
             contents: write # to create release (changesets/action)
@@ -18,7 +18,9 @@ jobs:
               with:
                   # This makes Actions fetch all Git history so that Changesets can generate changelogs with the correct commits
                   fetch-depth: 0
-            - uses: pnpm/action-setup@v4
+
+            - name: Action setup
+              uses: pnpm/action-setup@v4
 
             - name: Setup Node.js
               uses: actions/setup-node@v4
