@@ -1,8 +1,8 @@
 {
-	"name": "develop-kit-cli",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
+	"name": "@develop-kit/cli",
+	"version": "0.1.0",
+	"description": "The cli to rapidly develop apps and websites in seconds",
+	"type": "module",
 	"scripts": {
 		"dev": "tsx src/index.ts",
 		"build:dist": "tsc",
@@ -13,13 +13,25 @@
 		"test:unit": "vitest",
 		"test": "pnpm run test:unit -- --run"
 	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/develop-kit/cli.git"
+	},
+	"bugs": {
+		"url": "https://github.com/develop-kit/cli/issues"
+	},
+	"homepage": "https://github.com/develop-kit/cli",
+	"keywords": [
+		"cli",
+		"develop",
+		"app",
+		"website"
+	],
+	"author": "MrGeniusProgrammer <mrgeniusprogrammer69@gmail.com>",
+	"license": "MIT",
 	"dependencies": {
 		"commander": "^12.1.0"
 	},
-	"type": "module",
 	"devDependencies": {
 		"@eslint/js": "^9.16.0",
 		"@ianvs/prettier-plugin-sort-imports": "^4.4.0",
@@ -38,6 +50,6 @@
 		"vitest": "^2.1.8"
 	},
 	"bin": {
-		"develop-kit": "./dist/index.js"
+		"develop-kit": "dist/index.js"
 	}
 }

@@ -5,7 +5,7 @@ const program = new Command();
 program
 	.name("develop-kit")
 	.description("An example CLI built with TypeScript")
-	.version("1.0.0");
+	.version("0.1.0");
 
 program
 	.command("greet <name>")
