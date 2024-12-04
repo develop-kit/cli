@@ -9,6 +9,7 @@
 		"build:dist": "tsc",
 		"build": "pnpm run build:dist",
 		"release": "changeset publish",
+		"beta": "changeset pre enter next",
 		"version": "changeset version",
 		"lint": "prettier --check . && eslint .",
 		"lint:fix": "eslint . --fix",
