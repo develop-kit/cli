@@ -1,6 +1,6 @@
 {
 	"name": "@develop-kit/cli",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "The cli to rapidly develop apps and websites in seconds",
 	"type": "module",
 	"scripts": {
@@ -10,6 +10,7 @@
 		"build": "pnpm run lint && pnpm run build:dist",
 		"changeset:publish": "changeset publish",
 		"changeset:add": "changeset add",
+		"changeset:version": "changeset version",
 		"lint": "prettier --check . && eslint .",
 		"lint:fix": "eslint . --fix",
 		"format": "prettier --write .",
