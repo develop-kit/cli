@@ -3,7 +3,7 @@ import { Command } from "commander";
 const program = new Command();
 
 program
-	.name("my-cli")
+	.name("develop-kit")
 	.description("An example CLI built with TypeScript")
 	.version("1.0.0");
 
