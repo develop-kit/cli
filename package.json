@@ -1,6 +1,6 @@
 {
 	"name": "@develop-kit/cli",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "The cli to rapidly develop apps and websites in seconds",
 	"type": "module",
 	"scripts": {
@@ -8,6 +8,7 @@
 		"dev": "tsx src/index.ts",
 		"build:dist": "tsc",
 		"build": "pnpm run lint && pnpm run build:dist",
+		"release": "standard-version",
 		"lint": "prettier --check . && eslint .",
 		"lint:fix": "eslint . --fix",
 		"format": "prettier --write .",
@@ -47,7 +48,9 @@
 		"eslint-plugin-prettier": "^5.2.1",
 		"execa": "^9.5.1",
 		"globals": "^15.13.0",
+		"lint-staged": "^15.2.10",
 		"prettier": "^3.4.2",
+		"standard-version": "^9.5.0",
 		"ts-node": "^10.9.2",
 		"tsx": "^4.19.2",
 		"typescript": "^5.7.2",
