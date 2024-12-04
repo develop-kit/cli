@@ -1,16 +1,7 @@
-#!/usr/bin/env node
 import { Command } from "commander";
 
-const program = new Command();
-
-program
-	.name("develop-kit")
-	.description("An example CLI built with TypeScript")
-	.version("0.1.0");
-
-program
-	.command("greet <name>")
-	.description("Greet a person")
+export const add = new Command("add")
+	.description("applies to base packages")
 	.option("-u, --uppercase", "Convert the name to uppercase")
 	.action((name: string, options: { uppercase: boolean }) => {
 		const greeting = options.uppercase
@@ -18,5 +9,3 @@ program
 			: `Hello, ${name}!`;
 		console.log(greeting);
 	});
-
-program.parse(process.argv);

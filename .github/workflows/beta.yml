@@ -11,6 +11,7 @@ jobs:
         runs-on: ubuntu-latest
         permissions:
             contents: write # to create release (changesets/action)
+            id-token: write
             pull-requests: write # to create pull request (changesets/action)
         steps:
             - name: Checkout Repo

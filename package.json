@@ -6,7 +6,7 @@
 	"scripts": {
 		"dev:watch": "tsx watch src/index.ts",
 		"dev": "tsx src/index.ts",
-		"build:dist": "tsc",
+		"build:dist": "tsc -p ./tsconfig.json",
 		"build": "pnpm run build:dist",
 		"release": "changeset publish",
 		"beta": "changeset pre enter next",
@@ -36,7 +36,7 @@
 	"author": "MrGeniusProgrammer <mrgeniusprogrammer69@gmail.com>",
 	"license": "MIT",
 	"files": [
-		"./dist/"
+		"dist"
 	],
 	"dependencies": {
 		"commander": "^12.1.0"
